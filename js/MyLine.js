@@ -17,7 +17,7 @@ this.moveCloser = function(v1, v2, mspeed){
     // Normalize
     var toV1Length = v1.dist(v2);
 
-    var speed = toV1Length / 5.4;
+    var speed = toV1Length / 19.4;
 
 
 
@@ -26,7 +26,7 @@ this.moveCloser = function(v1, v2, mspeed){
     toV1Z = toV1Z / toV1Length;
 
     // Move towards the player
-    v2.x -= (toV1X * speed) - 1.5;
+    v2.x -= (toV1X * speed) - 0.7;
     v2.y -= (toV1Y * speed) ;
     v2.z -= toV1Z * speed;
 

@@ -17,7 +17,7 @@ function mouseMoved() {
 
 
 function draw() {
-  background(255,255,255,20);
+  background(255,255,255,2);
   
   myLine.update();
   myLine.draw();
