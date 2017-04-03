@@ -1,8 +1,10 @@
-function MyLine(length, sv) {
+function MyLine(wind, length, sv) {
     var me = this;
     me.segmentLength = 30;
     me.speed = 3;
     me.points = [];
+    me.wind = wind;
+
     for(var i = 0; i < length; i++){
         me.points[i] = createVector(sv.x,sv.y,sv.z);
     }
@@ -17,7 +19,7 @@ this.moveCloser = function(v1, v2, mspeed){
     // Normalize
     var toV1Length = v1.dist(v2);
 
-    var speed = toV1Length / 19.4;
+    var speed = toV1Length / 2;
 
 
 
@@ -26,8 +28,8 @@ this.moveCloser = function(v1, v2, mspeed){
     toV1Z = toV1Z / toV1Length;
 
     // Move towards the player
-    v2.x -= (toV1X * speed) - 0.7;
-    v2.y -= (toV1Y * speed) ;
+    v2.x -= (toV1X * speed) - me.wind.force.x;
+    v2.y -= (toV1Y * speed) - me.wind.force.y;
     v2.z -= toV1Z * speed;
 
 }

@@ -1,8 +1,10 @@
 var myLine = null;
-
+var wind = null;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  myLine = new MyLine(170, createVector(windowWidth / 2, windowHeight / 2, 1));
+  wind = new MyWind();
+  myLine = new MyLine(wind, 70, createVector(windowWidth / 2, windowHeight / 2, 1));
+
   console.log(myLine);
 }
 
@@ -18,7 +20,7 @@ function mouseMoved() {
 
 function draw() {
   background(255,255,255,2);
-  
+  wind.update();
   myLine.update();
   myLine.draw();
 }
