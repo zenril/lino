@@ -1,7 +1,7 @@
 function MyWind() {
     var me = this;
     me.strength = 3;
-    me.angle = 180;
+    me.angle = 90;
 
     me.force = createVector(2,3,0);
 
