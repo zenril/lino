@@ -21,8 +21,6 @@ this.moveCloser = function(v1, v2, mspeed){
 
     var speed = toV1Length / 2;
 
-
-
     toV1X = toV1X / toV1Length;
     toV1Y = toV1Y / toV1Length;
     toV1Z = toV1Z / toV1Length;
