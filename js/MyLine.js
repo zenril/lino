@@ -1,6 +1,8 @@
+var myEnv = new MyEnviroment();
+
 function MyLine(wind, length, sv) {
     var me = this;
-    me.segmentLength = 30;
+    me.segmentLength = 440;
     me.speed = 3;
     me.points = [];
     me.wind = wind;
@@ -26,8 +28,8 @@ this.moveCloser = function(v1, v2, mspeed){
     toV1Z = toV1Z / toV1Length;
 
     // Move towards the player
-    v2.x -= (toV1X * speed) - me.wind.force.x;
-    v2.y -= (toV1Y * speed) - me.wind.force.y;
+    v2.x -= (toV1X * speed) ///- me.wind.force.x;
+    v2.y -= (toV1Y * speed) ///- me.wind.force.y;
     v2.z -= toV1Z * speed;
 
 }
@@ -40,7 +42,7 @@ this.moveCloser = function(v1, v2, mspeed){
             var current = me.points[i];
             if(last != null){
                 var distance = current.dist(last);
-                if( distance > 1 ){
+                if( distance > 10 ){
                     me.moveCloser(last,current,me.speed);
                 }
             }
@@ -52,9 +54,10 @@ this.moveCloser = function(v1, v2, mspeed){
         noFill();
         strokeCap(ROUND);
         beginShape();
-        strokeWeight(4);
+        strokeWeight(myEnv.tool.width);
         
-        stroke(18,171,135);
+      
+        stroke.apply(null, myEnv.tool.color);
         for(var i = 0; i < me.points.length; i++){
             curveVertex(me.points[i].x, me.points[i].y);
         }
