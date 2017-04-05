@@ -72,18 +72,6 @@ this.moveAway = function(v1, v2, mspeed){
             }
             last = current;
         }
-
-
-        for(var i = me.points.length - 1; i >= 0 ; i--){
-            var current = me.points[i];
-            if(last2 != null){
-                var distance = current.dist(last);
-                if( distance > 0.1){
-                    me.moveCloser(last2,current,me.speed);
-                }
-            }
-            last2 = current;
-        }
     }
 
     me.movePointsForRadius = function(x,y,r){
