@@ -57,6 +57,15 @@ function MyEnviroment(){
         }
     }
 
+    me.mouseRadius = function(x,y,r){
+        // for(var i in me.map){
+        //     var line = me.map[i].line;
+        //     if(me.map[i] != me.current){
+        //         line.movePointsForRadius(x,y,r);
+        //     }
+        // }
+    }
+
     me.draw = function(){
         for(var i in me.map){
             var layer = me.map[i];

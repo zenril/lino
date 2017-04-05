@@ -1,7 +1,7 @@
 function MyWind() {
     var me = this;
-    me.strength = 40;
-    me.angle = 0;
+    me.strength = 0.1;
+    me.angle = 90;
 
     me.force = createVector(2,3,0);
 
@@ -15,14 +15,14 @@ function MyWind() {
     }
 
     me.update = function(){
-        me.angle += 3;//random( 0, 0.1);
-        me.angle = (me.angle % 360) + 1;
+        // me.angle += 3;//random( 0, 0.1);
+        // me.angle = (me.angle % 360) + 1;
         
-        //me.strength = random( max(1 ,me.strength - 1), min(550, 1 + me.strength));
+       // me.strength = random( max(1 ,me.strength - 1), min(550, 1 + me.strength));
 
         
 
-        //me.angle = random( max(0,me.angle - amount), min(360, amount + me.angle));
+       // me.angle = random( max(0,me.angle - amount), min(360, amount + me.angle));
 
         var a =  me.angle;
 
